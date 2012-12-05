@@ -25,8 +25,17 @@ Returns _all_ registered WebPipes.
 Returns a single Block Definition.
 
 ##### Arguments
-	
-	'slug' : 'parse-markdown'
+
+<table>
+	<tr>
+		<th>Parameter Name</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>slug</td>
+		<td>A slug for a Block</td>
+	</tr>
+</table>
 	
 ##### Example
 
@@ -40,9 +49,18 @@ Returns a single Block Definition.
 Register a WebPipe.
 
 ##### Arguments
-	
-	'url' : http://block-endpoint
 
+<table>
+	<tr>
+		<th>Parameter Name</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>url</td>
+		<td>An URL to a Block Definition</td>
+	</tr>
+</table>
+	
 ##### Example
 
 	curl -i -X POST -d 'url=http://block-endpoint' http://registry.webpipes.org/blocks
