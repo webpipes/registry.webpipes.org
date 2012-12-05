@@ -1,0 +1,14 @@
+{
+    "name": "registry-webpipes-org",
+    "version": "0.0.1",
+    "engines": {
+        "node": "0.6.12",
+        "npm": "1.1.9"
+    },
+    "dependencies": {
+        "express": "3.0.3",
+        "underscore": "1.4.2",
+        "cradle": "0.6.4",
+        "jade": "0.27.7"
+    }
+}

@@ -1,0 +1,102 @@
+body {
+	background-color: #FAF7F7;
+	font-family: "Lato", "Helvetica Neue",arial,sans-serif;
+	color: #211922;
+	font-size:1.15em;
+	margin-bottom: 1.25em;
+}
+		
+h2 { 
+	font-size:22px;
+	line-height:30px;
+}
+		
+.container, 
+.container li {
+	line-height:1.6em;
+}
+		
+/* Webfont loading hack, prevent FOUC. */
+* {
+	visibility:hidden;
+}
+
+.wf-active * {
+	visibility:visible;
+}
+
+.navbar-inner {
+	background:#90150E;
+}
+		
+.navbar .brand,
+.navbar .brand a {
+	color:#fff;
+	text-shadow:none;
+	font-size:24px;
+	margin-bottom:0;
+	line-height:1.25em;
+}
+		
+.navbar .nav > li > a,
+.navbar .nav > li > a:visited,
+.navbar .nav > li > a:active,
+.navbar .nav > li > a:hover {
+	color:#eee !important;
+	text-shadow:none;
+}
+
+.navbar .nav > li > a:hover {
+	background-color: rgba(255, 255, 255, 0.05);
+}
+		
+.brand:hover {
+	background-color: #333;
+	background-color: rgba(255, 255, 255, 0.05);
+	color: #ffffff;
+	text-decoration: none;
+}
+		
+ul, ol {
+	padding: 0;
+	margin: 0 0 0.5em 2.5em;
+	color: #444;
+}
+		
+li {
+	color:#444;
+}
+
+hr.soften {
+	margin: 1.5em 0 1.25em 0;
+}
+		
+a, a:visited, a:active {
+	color: #90150E;
+	text-decoration: none;
+	background: none;
+	font-weight:bold;
+}
+a:hover {
+	color:#444;
+}
+.navbar .nav {
+	float: right;
+	margin: 0;
+	font-size: 0.9em;
+}
+
+footer {
+	text-align:right;
+}
+ol {
+	text-align: left;
+	font-size: 18px;
+	line-height: 2.2em;
+}
+li {
+	color: #CCC;
+}
+li span {
+	color:#444;
+}
