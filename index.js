@@ -13,12 +13,12 @@ app.configure(function () {
   app.set('view engine', 'html');
   app.use(express.bodyParser());
   app.use(functions.allowCrossDomain);
-  app.use(functions.logRequests);
   app.use(express.static(__dirname + '/public'));
   app.use(express.favicon(__dirname + '/public/favicon.ico'));
 });
 
 app.configure('development', function () {
+  app.use(functions.logRequests);
   app.use(express.errorHandler({
     dumpExceptions: true,
     showStack: true
