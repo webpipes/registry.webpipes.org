@@ -17,6 +17,7 @@ Returns _all_ registered WebPipes.
 
 	curl -i -X GET http://registry.webpipes.org/blocks.json
 
+
 * * *
 
 ### GET /blocks/:slug[.json]
@@ -31,6 +32,7 @@ Returns a single Block Definition.
 
 	curl -i -X GET http://registry.webpipes.org/blocks/parse-markdown.json
 
+
 * * *
 
 ### POST /blocks
@@ -44,6 +46,7 @@ Register a WebPipe.
 ##### Example
 
 	curl -i -X POST -d 'url=http://block-endpoint' http://registry.webpipes.org/blocks
+
 
 * * *
 
