@@ -9,25 +9,43 @@ This registry exists as place for developers to leverage published WebPipes and 
 
 ## API
 
-### GET /webpipes[.json]
+### GET /blocks[.json]
 
-Returns all registered WebPipes.
+Returns _all_ registered WebPipes.
 
-### GET /webpipes/:name[.json]
+##### Example
 
-Returns a single Block Definition for a WebPipe with :name.
+	curl -i -X GET http://registry.webpipes.org/blocks.json
 
-### POST /webpipes
+* * *
 
-#### Arguments
+### GET /blocks/:slug[.json]
+
+Returns a single Block Definition.
+
+##### Arguments
 	
-	'url' : http://www.example.com/
+	'slug' : 'parse-markdown'
+	
+##### Example
+
+	curl -i -X GET http://registry.webpipes.org/blocks/parse-markdown.json
+
+* * *
+
+### POST /blocks
 
 Register a WebPipe.
 
-#### Example
+##### Arguments
+	
+	'url' : http://block-endpoint
 
-	curl -i -X POST -d 'url=http://block-parse-markdown.herokuapp.com' http://registry.webpipes.org/blocks
+##### Example
+
+	curl -i -X POST -d 'url=http://block-endpoint' http://registry.webpipes.org/blocks
+
+* * *
 
 ## Issues
 
