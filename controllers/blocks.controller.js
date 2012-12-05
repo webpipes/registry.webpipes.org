@@ -55,7 +55,6 @@ blocks.readByName = function (request, response) {
 
 blocks.register = function (request, response) {
   var url = request.param("url");
-
   if (!url) {
     response.send(404, "Webpipe doesn't have a name?!");
     return;

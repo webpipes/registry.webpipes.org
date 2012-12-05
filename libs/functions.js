@@ -30,44 +30,45 @@ functions.exit = function (message) {
 
 // Fetch and validate the Block definition.
 functions.getBlockDefinition = function (definitionURL, callback) {
-	var parsedURL = url.parse(definitionURL);
-	var options = { 
-		hostname: parsedURL.hostname, 
-		path: parsedURL.path,
-		method: 'OPTIONS' 
-	};
-	
+  var parsedURL = url.parse(definitionURL);
+  console.log(parsedURL);
+  var options = {
+    hostname: parsedURL.hostname,
+    path: parsedURL.path,
+    method: 'OPTIONS'
+  };
+
   var request = http.request(options, function (response) {
-		response.setEncoding('utf8');
-	  response.on('data', function (def) {
-	    if (response.statusCode !== 200) {
-	      callback(errors.BLOCKDEF_INVALID_STATUS)
-	    } else if (!_.has(def, 'name') && _.isString(def.name)) {
-	      callback(errors.BLOCKDEF_INVALID_NAME);
-	    } else if (!_.has(def, 'description') && _.isString(def.description)) {
-	      callback(errors.BLOCKDEF_INVALID_DESCRIPTION);
-	    } else if (!_.has(def, 'inputs') && _.isArray(def.inputs)) {
-	      callback(errors.BLOCKDEF_INVALID_INPUTS);
-	    } else if (!_.has(def, 'outputs') && _.isArray(def.outputs)) {
-	      callback(errors.BLOCKDEF_INVALID_OUTPUTS);
-	    } else {
-	      callback(false, JSON.parse(def));
-	    }
-	  });
+    response.setEncoding('utf8');
+    response.on('data', function (def) {
+      if (response.statusCode !== 200) {
+        callback(errors.BLOCKDEF_INVALID_STATUS)
+      } else if (!_.has(def, 'name') && _.isString(def.name)) {
+        callback(errors.BLOCKDEF_INVALID_NAME);
+      } else if (!_.has(def, 'description') && _.isString(def.description)) {
+        callback(errors.BLOCKDEF_INVALID_DESCRIPTION);
+      } else if (!_.has(def, 'inputs') && _.isArray(def.inputs)) {
+        callback(errors.BLOCKDEF_INVALID_INPUTS);
+      } else if (!_.has(def, 'outputs') && _.isArray(def.outputs)) {
+        callback(errors.BLOCKDEF_INVALID_OUTPUTS);
+      } else {
+        callback(false, JSON.parse(def));
+      }
+    });
   })
-	
+
   request.on('error', function (err) {
-    callback(errors.BLOCKDEF_INVALID);
+    callback(errors.BLOCKDEF_FAILED);
   });
-	
-	request.end();
+
+  request.end();
 };
 
 // Slugs are db keys and url-friendly versions of a block's definition.name
 functions.getSlug = function (name) {
-	return name.toLowerCase()
-		.replace(' ', '-')
-		.replace(/[^A-Za-z0-9-]/g, '');
+  return name.toLowerCase()
+    .replace(' ', '-')
+    .replace(/[^A-Za-z0-9-]/g, '');
 };
 
 exports.functions = functions;
