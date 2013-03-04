@@ -1,6 +1,6 @@
 # WebPipe Registry
 
-A registry published of [WebPipes](http://www.webpipes.org/).
+A registry of published [WebPipes](http://www.webpipes.org/).
 
 ## Introduction
 
