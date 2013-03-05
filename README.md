@@ -4,8 +4,7 @@ A registry of published [WebPipes](http://www.webpipes.org/).
 
 ## Introduction
 
-WebPipes are expected to conform to the draft [WebPipe Specification](https://github.com/webpipes/spec).
-This registry exists as place for developers to leverage published WebPipes and share their own with the community.
+This registry exists as place for developers to leverage WebPipes and share their own with the community. All registered WebPipes are required to conform to the [WebPipe Specification](https://github.com/webpipes/spec).
 
 ## API
 
