@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+  ol 
+    - for (var key in definitions)
+      li
+        a(href='/blocks/' + key)= definitions[key].name
+        span
+          |  &mdash; 
+          = definitions[key].description
