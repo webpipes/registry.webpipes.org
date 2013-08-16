@@ -4,7 +4,7 @@ environment = process.env.NODE_ENV or 'development'
 
 exports.domain = 'registry.webpipes.org'
 
-exports.port = process.env.NODE_ENV or 3000
+exports.port = process.env.PORT or 3001
 
 exports.dirs = 
   assets        : path.join __dirname, 'assets'
