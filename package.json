@@ -8,7 +8,7 @@
     "dependencies": {
         "express": "3.0.3",
         "underscore": "1.4.2",
-        "cradle": "0.6.4",
+        "cradle": "0.6.6",
         "jade": "0.27.7",
         "coffee-script": "1.6.1"
     }
