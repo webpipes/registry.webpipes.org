@@ -57,6 +57,6 @@ exports.validateBlockDefinition = (def, callback) ->
 # Slugs are db keys and url-friendly versions of a block's definition.name
 exports.getSlug = (name) ->
   name.toLowerCase()
-    .replace ' ', '-'
+    .replace / /g, '-'
     .replace /[^A-Za-z0-9-]/g, ''
 
